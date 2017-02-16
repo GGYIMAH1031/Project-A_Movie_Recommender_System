@@ -1,0 +1,37 @@
+---
+title: "IS&T 5420 Project Proposal - Group 5"
+author: "Somua-Gyimah, Godfred   | Ballamudi, Bharath Chowdary    | Gottapu, Ram Deepak "
+date: "February 3, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#                                       A MOVIE RECOMMENDER SYSTEM
+
+## Introduction:
+Recommender Systems (RS) keep growing in popularity in the world of machine learning and predictive modeling. It is ubiquitous and is used in virtually every industry. Due to its direct impact on the bottom line, RS has been embraced by most of the major corporations in the world.  Wal-Mart and other supermarkets use it to predict the purchase activities of their customers. This allows for a more convenient shopping experience, which also translates into more shopping on the consumer's part and consequently more revenue to the business. Online stores such as Amazon, Ebay and Etsy use RS to recommend products to buyers. Pandora and Spotify use it to recommend music from specific genres to listeners based on their listening history. LinkedIn, a professional networking site, uses RS to recommend individuals, recruiters, and advertisers to one other. LinkedIn reported that about 50% of the total job applications and job views by individuals were as a result of their recommendation model [1]. The other business areas which have adopted the RS approach include social networking sites (Facebook, Instagram etc.), search engines, restaurants, insurance companies, online dating among countless others. 
+
+Currently, one major area where RS benefits the vast majority of Americans is in movie recommendations. Netflix, an entertainment company, employs over 300 people, spending a staggering $150 million annually, just to generate movie recommendations for viewers based on their previous preferences and movie-watching history [2]. For a company like Netflix, accurate movie recommendations are critical since the company gets most of its revenue from customer subscriptions. The company uses a "one free month trial" policy to reel in most of their new customers.  During the registration, they ask each new customer to rate atleast five movies from different genres, which provides them with customer-specific data. One major challenge is that at any given time, there are millions of movies for a customer to choose from. Therefore, the movie selection process can be a very tedious exercise for the average consumer. Often, customers will cancel their subscription after a few failed attempts at finding the right movie to watch. Therefore, to prevent loss of revenue through subscription cancellations, Netflix helps its customers to locate movies they would like to watch using their RS. Hence, there is a direct correlation between the accuracy of their RS and their income generation. It therefore came as no surprise when in 2008, Netflix organized a competition with a million dollar prize tag for the winner who will improve their existing RS by atleast 10%. 
+
+In this project, we will be building our own recommender system, similar to the one used by Netflix. Some of the business questions which we will seek to answer include the following:
+
+(1)	Given a user's history or movie preferences, which movie is the user likely to be interested in?
+
+(2)	Should we adopt a binary class approach (recommend or not recommend) or a multi-class approach (ratings - 1, 2, 3, 4 and 5)
+
+(3)	If there is more than one movie to recommend, what ranking system should be used to determine the order of the movie list? 
+       
+## Data Source and Collection:
+The data which will be used in building our recommendation engine was obtained from MovieLens, an online movie recommendation service. The dataset describes the 5-star rating (classification) and free-text tagging activity from the website. It contains over 20 million (20,000,263) ratings and 465,564 tag applications across 27,278 movies. The dataset was developed by collecting movie preference information from 138,493 users between January 09, 1995 and March 31, 2015 - a period of more than twenty years. All the 138,493 users were randomly selected and each of them was asked to rate at least 20 movies. Each user was given a number (id) to distinguish the different users. The user ids were anonymized and so no demographic or personal information was collected. The data comes in 6 different files namely: genome-scores.csv, genome-tags.csv, links.csv, movies.csv, ratings.csv and tags.csv. The major features of the data set include: userId, movieId, rating, tag, tagId and genres. The data set is a 200MB zip file and is publicly available for download at http://grouplens.org/datasets/.
+
+## References:
+[1] Gupta, 2011. "How does LinkedIn's recommendation system work?". URL:https://www.quora.com/How-does-LinkedIns-recommendation-system-work. Date last accessed: 02/03/2017
+
+[2] Roettgers, 2014. "Netflix spends $150 million on content recommendations every year".  URL:https://gigaom.com/2014/10/09/netflix-spends-150-million-on-content-recommendations-every-year/. Date last accessed: 02/03/2017
+
+
+
+
